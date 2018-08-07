@@ -58,9 +58,6 @@ public class ContactController {
         // persist the new Contact
         dao.addContact(contact);
 
-        // we don't want to forward to a View component - we want to
-        // redirect to the endpoint that displays the Contacts Page
-        // so it can display the new Contact in the table.
         return "redirect:displayContactsPage";
     }
 
