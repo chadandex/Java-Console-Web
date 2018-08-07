@@ -1,0 +1,1 @@
+Simple contact list; some* Ajax, with Spring MVC
