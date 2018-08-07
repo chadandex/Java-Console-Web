@@ -1,0 +1,199 @@
+<!--
+Chad Andexler
+The Software Guild
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vending Machine</title>
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css"
+              rel="stylesheet">
+		
+		<link href="css/styles.css"
+			  type="text/css"
+			  rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+			<div align="center">
+				<h1 id="mainHeading"><b>Vending Machine</b></h1>
+				<hr/>
+			</div>
+			
+			<ul class="list-group" id="errorMessages"></ul>
+			
+			<!--Product "Menu"-->
+			<div class="col-md-8 machine" data-bind="foreach: cells" id="productMenu">
+                <div class="col-md-8 productInfo">
+					<ul id="products">
+						<div class="square">
+							<div class="content">
+								<button type="button" id="product1" class="btn btn-default"></button>
+							</div>
+						</div>
+						<div class="square">
+							<div class="content">
+								<button type="button" id="product2" class="btn btn-default"></button>
+							</div>
+						</div>
+						<div class="square">
+							<div class="content">
+								<button type="button" id="product3" class="btn btn-default"></button>
+							</div>
+						</div>
+						<div class="square">
+							<div class="content">
+								<button type="button" id="product4" class="btn btn-default"></button>
+							</div>
+						</div>
+						<div class="square">
+							<div class="content">
+								<button type="button" id="product5" class="btn btn-default"></button>
+							</div>
+						</div>
+						<div class="square">
+							<div class="content">
+								<button type="button" id="product6" class="btn btn-default"></button>
+							</div>
+						</div>
+						<div class="square">
+							<div class="content">
+								<button type="button" id="product7" class="btn btn-default"></button>
+							</div>
+						</div>
+						<div class="square">
+							<div class="content">
+								<button type="button" id="product8" class="btn btn-default"></button>
+							</div>
+						</div>
+						<div class="square">
+							<div class="content">
+								<button type="button" id="product9" class="btn btn-default"></button>
+							</div>
+						</div>
+					</ul>
+                </div>
+           
+			</div>
+			
+			
+			<!--User Money Menu-->
+			<div class="col-md-4" id="userOptions">
+			
+			<div align="center">
+				<label for="totalMoney" class="control-label">
+					Total $ In
+				</label>
+			
+				<input type="text"
+					class="form-control"
+					id="totalMoney"
+					placeholder="$" readonly>
+					
+				<br/>
+					
+				<div class="col-md-6">
+					<button type="button"
+							id="addDollar"
+							class="button buttonDo">
+					Add Dollar
+					</button>
+				</div>
+			
+				<div class="col-md-6">
+					<button type="button"
+							id="addQuarter"
+							class="button buttonQu">
+					Add Quarter
+					</button>
+				</div>
+			
+				<div class="col-md-6">
+					<button type="button"
+							id="addDime"
+							class="button buttonDi">
+					Add Dime
+					</button>
+				</div>
+			
+				<div class="col-md-6">
+					<button type="button"
+							id="addNickel"
+							class="button buttonNi">
+					Add Nickel
+					</button>
+				</div>
+				
+				<br/> <!-- this won't add blank space X( -->
+			</div>
+			
+			<div id="line">
+				<hr/>
+			</div>
+			
+			<!--Message/Item Section-->
+			<div align="center">
+				<label for="machMessage" class="control-label">
+					Messages
+				</label>
+			</div>
+			
+			<input type="text"
+					class="form-control"
+					id="machMessage"
+					placeholder="" readonly>
+			<br/>
+			<form class="form-horizontal" role="form" id="item-form">
+				<div class="form-group">
+					<label for="item"  class="col-md-4 control-label">
+						Item: 
+					</label>
+			
+					<div class="col-md-8">
+					<input type="text"
+						class="form-control"
+						id="item"
+						placeholder="No Item Currently" readonly>
+					</div>
+				</div>
+			</form>
+			
+			<div align="center">
+				<button type="button"
+						id="getPurchase"
+						class="button buttonPurchase">
+				Make Purchase
+				</button>
+			</div>
+			
+			<div id="line">
+				<hr/>
+			</div>
+			
+			<!-- Change Return Section -->
+			<div align="center">
+				<label for="changeLeft" class="control-label">
+					Change
+				</label>
+			
+				<input type="text"
+						class="form-control"
+						id="changeLeft"
+						placeholder="" readonly>
+				<br/> 
+				<button type="button"
+							id="getChange"
+							class="button buttonChRtrn">
+					Change Return
+				</button>
+				</div>
+			</div>
+		</div>
+		
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>
