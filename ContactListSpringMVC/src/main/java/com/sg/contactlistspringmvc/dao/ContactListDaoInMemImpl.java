@@ -72,13 +72,7 @@ public class ContactListDaoInMemImpl implements ContactListDao {
         String emailSearchCriteria = 
             criteria.get(SearchTerm.EMAIL);
         
-        // Declare all the predicate conditions - remember that
-        // Predicate is a functional interface with one method
-        // called test(T t) that returns a boolean.  Since
-        // Predicate is generic, we get to specify the type of
-        // object we want T to be - in our case, we want T to be
-        // of type Contact.  That means the Predicates declared 
-        // here will have one method: boolean test(Contact c)
+        // Declare all the predicate conditions
         Predicate<Contact> firstNameMatchPredicate;
         Predicate<Contact> lastNameMatchPredicate;
         Predicate<Contact> companyMatchPredicate;
@@ -87,10 +81,7 @@ public class ContactListDaoInMemImpl implements ContactListDao {
 
         // Placeholder predicate - always returns true. Used for 
         // search terms that are empty - if the user didn't specify 
-        // a value for one of the search terms, we must return true
-        // because we are ANDing all the search terms together and 
-        // our spec says that we return everything in the DAO when
-        // the user leaves all the search terms blank.
+        // a value for one of the search terms, must return true
         Predicate<Contact> truePredicate = (c) -> {
             return true;
         };
@@ -139,9 +130,7 @@ public class ContactListDaoInMemImpl implements ContactListDao {
                 (c) -> c.getEmail().equals(emailSearchCriteria);
         }
 
-        // Return the list of Contacts that match the given criteria. 
-        // To do this we just AND all the predicates together in a 
-        // filter operation.
+        // Return the list of Contacts that match the given criteria.
         return contactMap.values().stream()
                 .filter(firstNameMatchPredicate
                         .and(lastNameMatchPredicate)
