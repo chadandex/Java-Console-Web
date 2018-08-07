@@ -1,0 +1,103 @@
+/*Chad Andexler
+The Software Guild*/
+
+.square {
+	float:left;
+	position: relative;
+	width: 30%;
+	padding-bottom: 35%;
+	margin:1.66%;
+				
+}
+			
+.content {
+	position:absolute;
+	height:90%; 
+	width:90%; 
+	padding: 10% 7%;
+}
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;               
+  background-color:#808080;
+  height: 1px;
+}
+
+#totalMoney {
+	text-align:center;
+}
+
+#machMessage {
+	text-align:center;
+}
+
+#changeLeft {
+	text-align:center;
+}
+			
+.btn {
+	transition-duration: 0.4s; 
+	transition-duration: 0.4s;
+	border-radius: 12px;
+}
+			
+.button {
+	transition-duration: 0.4s; 
+	transition-duration: 0.4s;
+}
+			
+.button:hover {
+	background-color: #555555;
+	color: white;
+}
+			
+.buttonDo {
+	height: 50px;
+	width: 65%;
+	background-color: white;
+	color: black;
+	border: 2px solid #e7e7e7;
+}
+			
+.buttonQu {
+	height: 50px;
+	width: 65%;
+	background-color: white;
+	color: black;
+	border: 2px solid #e7e7e7;
+}
+			
+.buttonDi {
+	height: 50px;
+	width: 65%;
+	background-color: white;
+	color: black;
+	border: 2px solid #e7e7e7;
+}
+			
+.buttonNi {
+	height: 50px;
+	width: 65%;
+	background-color: white;
+	color: black;
+	border: 2px solid #e7e7e7;
+}
+			
+.buttonPurchase {
+	height: 40px;
+	width: 75%;
+	background-color: white;
+	color: black;
+	border: 2px solid #e7e7e7;
+}
+			
+.buttonChRtrn {
+	height: 40px;
+	width: 75%;
+	background-color: white;
+	color: black;
+	border: 2px solid #e7e7e7;
+}
