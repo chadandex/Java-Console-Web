@@ -1,0 +1,81 @@
+<!--
+Chad Andexler
+The Software Guild
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Weather</title>
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css"
+              rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+			<h1 id="mainHeading"><b>Weather Page</b></h1>
+			<hr/>
+			<ul class="list-group" id="errorMessages"></ul>
+			
+			<!-- Input Area -->
+			<form class="form-inline" id="get-weather">
+				<div class="form-group">
+					<label for="zipcode" class="control-label">
+						Zipcode:
+					</label>
+					<input type="number"
+							class="form-control"
+							id="zipcode"
+							maxlength="5"
+							placeholder="Enter Zipcode" required/>
+				</div>
+				<div class="form-group">
+					<label for="units">
+						Units:
+					</label>
+					<select id="unit-choice" class="form-control">
+						<option value="imperial">Imperial</option>
+						<option value="metric">Metric</option>
+					</select>
+				</div>
+
+				<button type="button"
+						id="getWeather"
+						class="btn btn-default">
+				Get Weather
+				</button>
+			</form>
+			
+			<!-- Current Conditions -->
+			<form class="form-inline" id="current-conditions">
+				<div class="row" id="current-conditions">
+					
+					<h2 id="current-cond"></h2>
+					
+					<div class="col-md-3">
+						<p <span id="weather-now"></span></p>
+						<div id="description" style="text-transform: capitalize"></div>
+					</div>
+					
+					<div class="col-md-6">
+						<p <span id="weather-cond"></span></p>
+					</div>
+				</div>
+			</form>
+			
+			<!-- Five Day Forecast -->
+			<form class="form-inline" id="five-day">
+				<h2 id="five-day-text"></h2>
+				
+				<p id="five-day-weather"></p>
+				<div class="col-xs-12" id="fiveDayForecast" style="height: 200px; overflow-x: auto; white-space: nowrap;">
+                </div>
+			</form>
+			</form>
+		</div>
+		
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>
